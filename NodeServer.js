@@ -1,8 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
-var nodemailer = require('nodemailer');
-var expy = require('./ExecutePython');
+//var nodemailer = require('nodemailer');
 
 http.createServer(function(req, res) {
   fs.readFile('index.html', function(err, data) {
@@ -23,7 +22,7 @@ http.createServer(function(req, res) {
 
       pyshell.on('message', function(message) {
         // received a message sent from the Python script (a simple "print" statement)
-        var transporter = nodemailer.createTransport({
+        /*var transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
             user: 'dev.jaydickson02@gmail.com',
@@ -44,7 +43,7 @@ http.createServer(function(req, res) {
           } else {
             console.log('Email sent: ' + info.response);
           }
-        });
+        });*/
       });
 
       // end the input stream and allow the process to exit
