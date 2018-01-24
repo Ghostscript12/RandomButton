@@ -18,7 +18,7 @@ http.createServer(function(req, res) {
   service: 'gmail',
   auth: {
     user: 'dev.jaydickson02@gmail.com',
-    pass: '02jd.pass0706'
+    pass: ''
   }
 });
 
