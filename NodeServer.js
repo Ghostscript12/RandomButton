@@ -3,6 +3,7 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 var nodemailer = require('nodemailer');
+var SendMail = require('./SendEmail');
 //Http server for dealing with connections
 http.createServer(function(req, res) {
   //Read html
@@ -23,32 +24,11 @@ http.createServer(function(req, res) {
       // Use python shell
       var PythonShell = require('python-shell');
       var pyshell = new PythonShell(myPythonScriptPath);
-//received a message sent from the Python script (a simple "print" statement)
+      //received a message sent from the Python script (a simple "print" statement)
       pyshell.on('message', function(message) {
+        
+        SendMail.email(message);
 
-        //Sets up the email credential
-        var transporter = nodemailer.createTransport({
-          service: 'gmail',
-          auth: {
-            user: 'dev.jaydickson02@gmail.com',
-            pass: '02jd.pass0706'
-          }
-        });
-
-        var mailOptions = {
-          from: 'dev.jaydickson02@gmail.com',
-          to: 'wizzie405@gmail.com',
-          subject: 'Your Random SubReddit!',
-          text: message //The reply sent from then python script
-        };
-        //Sends the email
-        transporter.sendMail(mailOptions, function(error, info) {
-          if (error) {
-            console.log(error);
-          } else {
-            console.log('Email sent: ' + info.response);
-          }
-        });
       });
 
       // end the input stream and allow the process to exit
