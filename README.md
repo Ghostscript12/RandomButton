@@ -3,6 +3,9 @@ Requires the running of "npm install nodemailer --save" in the command line to i
 
 Also requires the python module Praw. Run pip install praw in the command line to accomplish this.
 
-Other requirements:
+Dependancys:
 
-npm install python-shell
+npm install python-shell --save
+npm install nodemailer --save
+
+pip install praw
