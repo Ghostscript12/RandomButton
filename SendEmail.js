@@ -1,4 +1,4 @@
-export.email = function(message) {
+exports.email = function(message) {
 //Sets up the email credential
 var transporter = nodemailer.createTransport({
   service: 'gmail',
