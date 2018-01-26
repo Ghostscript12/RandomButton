@@ -12,7 +12,7 @@ var mailOptions = {
   from: '',
   to: '',
   subject: 'Your Random SubReddit!',
-  text: message //The reply sent from then python script
+  text: message //The reply sent from the python script
 };
 //Sends the email
 transporter.sendMail(mailOptions, function(error, info) {
