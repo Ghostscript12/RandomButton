@@ -2,7 +2,6 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
-var nodemailer = require('nodemailer');
 var SendMail = require('./SendEmail');
 //Http server for dealing with connections
 http.createServer(function(req, res) {

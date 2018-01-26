@@ -1,3 +1,6 @@
+var fs = require('fs');
+var nodemailer = require('nodemailer');
+
 exports.email = function(message, toEmail) {
 //Sets up the email credential
 fs.readFile('password.txt', function(err, data) {
@@ -25,6 +28,7 @@ transporter.sendMail(mailOptions, function(error, info) {
     console.log('Email sent: ' + info.response);
   }
 });
-};
+
+});
 
 };
