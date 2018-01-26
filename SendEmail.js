@@ -3,14 +3,14 @@ exports.email = function(message) {
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'dev.jaydickson02@gmail.com',
-    pass: '02jd.pass0706'
+    user: '',
+    pass: ''
   }
 });
 
 var mailOptions = {
-  from: 'dev.jaydickson02@gmail.com',
-  to: 'wizzie405@gmail.com',
+  from: '',
+  to: '',
   subject: 'Your Random SubReddit!',
   text: message //The reply sent from then python script
 };
