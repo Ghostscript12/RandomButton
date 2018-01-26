@@ -26,8 +26,8 @@ http.createServer(function(req, res) {
       var pyshell = new PythonShell(myPythonScriptPath);
       //received a message sent from the Python script (a simple "print" statement)
       pyshell.on('message', function(message) {
-        
-        SendMail.email(message);
+
+        SendMail.email(message, 'wizzie405@gmail.com');
 
       });
 
