@@ -6,6 +6,7 @@ Also requires the python module Praw. Run pip install praw in the command line t
 Dependancys:
 
 npm install python-shell --save
+
 npm install nodemailer --save
 
 pip install praw
