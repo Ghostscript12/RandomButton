@@ -2,9 +2,9 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
-var SendMail = require('./SendEmail');
-var SendHtml = require('./SendHtml');
-var queryPython = require('./queryPython');
+var SendMail = require('./Modules/SendEmail');
+var SendHtml = require('./Modules/SendHtml');
+var queryPython = require('./Modules/queryPython');
 
 //Code Starts Here
 http.createServer(function(req, res) {
